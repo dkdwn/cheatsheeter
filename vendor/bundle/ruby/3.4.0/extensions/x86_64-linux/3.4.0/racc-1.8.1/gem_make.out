@@ -1,0 +1,18 @@
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+/usr/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-oym0ux sitelibdir\=./.gem.20261019-15388-oym0ux clean
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-oym0ux sitelibdir\=./.gem.20261019-15388-oym0ux
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-oym0ux sitelibdir\=./.gem.20261019-15388-oym0ux install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20261019-15388-oym0ux/racc
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-oym0ux sitelibdir\=./.gem.20261019-15388-oym0ux clean

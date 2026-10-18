@@ -1,0 +1,28 @@
+<% content_for :title, "Mot de passe oublié" %>
+
+<main class="page-shell page-shell--narrow">
+  <nav class="page-nav" aria-label="Navigation principale">
+    <%= link_to "cheatsheeter", root_path, class: "page-brand" %>
+    <%= link_to "Accueil", root_path, class: "page-nav__link" %>
+  </nav>
+
+  <section class="auth-card">
+    <p class="page-eyebrow">RÉCUPÉRATION DU COMPTE</p>
+    <h1>Mot de passe oublié ?</h1>
+    <p class="page-description">Indique ton adresse e-mail pour recevoir les instructions de réinitialisation.</p>
+
+    <% if flash[:alert].present? %>
+      <p class="form-errors"><%= flash[:alert] %></p>
+    <% end %>
+
+    <%= form_with url: passwords_path, class: "auth-form" do |form| %>
+      <div class="form-field">
+        <%= form.label :email_address, "Adresse e-mail" %>
+        <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: "toi@exemple.fr", value: params[:email_address] %>
+      </div>
+      <%= form.submit "Envoyer les instructions", class: "button button--primary auth-form__submit" %>
+    <% end %>
+
+    <%= link_to "Retour à la connexion", new_session_path, class: "text-link auth-card__link" %>
+  </section>
+</main>

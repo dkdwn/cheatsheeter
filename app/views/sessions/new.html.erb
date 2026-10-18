@@ -1,0 +1,39 @@
+<% content_for :title, "Connexion" %>
+
+<main class="page-shell page-shell--narrow">
+  <nav class="page-nav" aria-label="Navigation principale">
+    <%= link_to "cheatsheeter", root_path, class: "page-brand" %>
+    <%= link_to "Accueil", root_path, class: "page-nav__link" %>
+  </nav>
+
+  <section class="auth-card">
+    <p class="page-eyebrow">RAVI DE TE REVOIR</p>
+    <h1>Connexion</h1>
+    <p class="page-description">Connecte-toi pour retrouver tes fiches.</p>
+
+    <% if flash[:alert].present? %>
+      <p class="form-errors"><%= flash[:alert] %></p>
+    <% end %>
+    <% if flash[:notice].present? %>
+      <p class="notice"><%= flash[:notice] %></p>
+    <% end %>
+
+    <%= form_with url: session_path, class: "auth-form" do |form| %>
+      <div class="form-field">
+          <%= form.label :name, "Nom" %>
+          <%= form.text_field :name, required: true, autofocus: true, autocomplete: "nom", placeholder: "John Doe", value: params[:name] %>
+      </div>
+      <div class="form-field">
+        <%= form.label :email_address, "Adresse e-mail" %>
+        <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: "toi@exemple.fr", value: params[:email_address] %>
+      </div>
+      <div class="form-field">
+        <%= form.label :password, "Mot de passe" %>
+        <%= form.password_field :password, required: true, autocomplete: "current-password", placeholder: "Ton mot de passe", maxlength: 72 %>
+      </div>
+      <%= form.submit "Se connecter", class: "button button--primary auth-form__submit" %>
+    <% end %>
+
+    <%= link_to "Mot de passe oublié ?", new_password_path, class: "text-link auth-card__link" %>
+  </section>
+</main>

@@ -1,0 +1,22 @@
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/bcrypt_pbkdf-1.1.2/ext/mri
+/usr/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/bcrypt_pbkdf-1.1.2/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-gklrmt sitelibdir\=./.gem.20261019-15388-gklrmt clean
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/bcrypt_pbkdf-1.1.2/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-gklrmt sitelibdir\=./.gem.20261019-15388-gklrmt
+compiling bcrypt_pbkdf.c
+compiling bcrypt_pbkdf_ext.c
+compiling blowfish.c
+compiling explicit_bzero.c
+compiling hash_sha512.c
+linking shared-object bcrypt_pbkdf_ext.so
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/bcrypt_pbkdf-1.1.2/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-gklrmt sitelibdir\=./.gem.20261019-15388-gklrmt install
+/usr/bin/install -c -m 0755 bcrypt_pbkdf_ext.so ./.gem.20261019-15388-gklrmt
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/bcrypt_pbkdf-1.1.2/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-gklrmt sitelibdir\=./.gem.20261019-15388-gklrmt clean

@@ -1,0 +1,53 @@
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/nio4r-2.7.5/ext/nio4r
+/usr/bin/ruby extconf.rb
+checking for unistd.h... yes
+checking for rb_io_descriptor()... yes
+checking for linux/aio_abi.h... yes
+checking for linux/io_uring.h... yes
+checking for sys/select.h... yes
+checking for port_event_t in poll.h... no
+checking for sys/epoll.h... yes
+checking for sys/event.h... no
+checking for port_event_t in port.h... no
+checking for sys/resource.h... yes
+creating Makefile
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/nio4r-2.7.5/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-9phby1 sitelibdir\=./.gem.20261019-15388-9phby1 clean
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/nio4r-2.7.5/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-9phby1 sitelibdir\=./.gem.20261019-15388-9phby1
+compiling bytebuffer.c
+compiling monitor.c
+compiling nio4r_ext.c
+compiling selector.c
+In file included from nio4r_ext.c:6:
+../libev/ev.c:2136:31: warning: « ev_default_loop_ptr » initialisé et déclaré « extern »
+ 2136 |   EV_API_DECL struct ev_loop *ev_default_loop_ptr = 0; /* needs to be initialised to make it a definition despite extern */
+      |                               ^~~~~~~~~~~~~~~~~~~
+selector.c: Dans la fonction « NIO_Selector_wakeup »:
+selector.c:525:5: warning: la valeur retournée par « write » est ignorée alors qu'elle est déclarée avec l'attribut « warn_unused_result » [-Wunused-result]
+  525 |     write(selector->wakeup_writer, "\0", 1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c: Dans la fonction « evpipe_write »:
+../libev/ev.c:2798:11: warning: la valeur retournée par « write » est ignorée alors qu'elle est déclarée avec l'attribut « warn_unused_result » [-Wunused-result]
+ 2798 |           write (evpipe [1], &counter, sizeof (uint64_t));
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:2810:11: warning: la valeur retournée par « write » est ignorée alors qu'elle est déclarée avec l'attribut « warn_unused_result » [-Wunused-result]
+ 2810 |           write (evpipe [1], &(evpipe [1]), 1);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c: Dans la fonction « pipecb »:
+../libev/ev.c:2831:11: warning: la valeur retournée par « read » est ignorée alors qu'elle est déclarée avec l'attribut « warn_unused_result » [-Wunused-result]
+ 2831 |           read (evpipe [1], &counter, sizeof (uint64_t));
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:2845:11: warning: la valeur retournée par « read » est ignorée alors qu'elle est déclarée avec l'attribut « warn_unused_result » [-Wunused-result]
+ 2845 |           read (evpipe [0], &dummy, sizeof (dummy));
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+linking shared-object nio4r_ext.so
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/nio4r-2.7.5/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-9phby1 sitelibdir\=./.gem.20261019-15388-9phby1 install
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20261019-15388-9phby1
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/nio4r-2.7.5/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-9phby1 sitelibdir\=./.gem.20261019-15388-9phby1 clean

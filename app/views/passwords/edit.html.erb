@@ -1,0 +1,32 @@
+<% content_for :title, "Nouveau mot de passe" %>
+
+<main class="page-shell page-shell--narrow">
+  <nav class="page-nav" aria-label="Navigation principale">
+    <%= link_to "cheatsheeter", root_path, class: "page-brand" %>
+    <%= link_to "Accueil", root_path, class: "page-nav__link" %>
+  </nav>
+
+  <section class="auth-card">
+    <p class="page-eyebrow">SÉCURITÉ DU COMPTE</p>
+    <h1>Choisir un nouveau mot de passe</h1>
+    <p class="page-description">Choisis un nouveau mot de passe pour accéder à tes fiches.</p>
+
+    <% if flash[:alert].present? %>
+      <p class="form-errors"><%= flash[:alert] %></p>
+    <% end %>
+
+    <%= form_with url: password_path(params[:token]), method: :put, class: "auth-form" do |form| %>
+      <div class="form-field">
+        <%= form.label :password, "Nouveau mot de passe" %>
+        <%= form.password_field :password, required: true, autocomplete: "new-password", placeholder: "Nouveau mot de passe", maxlength: 72 %>
+      </div>
+      <div class="form-field">
+        <%= form.label :password_confirmation, "Confirmer le mot de passe" %>
+        <%= form.password_field :password_confirmation, required: true, autocomplete: "new-password", placeholder: "Répète le nouveau mot de passe", maxlength: 72 %>
+      </div>
+      <%= form.submit "Enregistrer le mot de passe", class: "button button--primary auth-form__submit" %>
+    <% end %>
+
+    <%= link_to "Retour à la connexion", new_session_path, class: "text-link auth-card__link" %>
+  </section>
+</main>

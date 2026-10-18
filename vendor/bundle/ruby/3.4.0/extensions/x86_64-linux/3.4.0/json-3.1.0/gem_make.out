@@ -1,0 +1,31 @@
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/json-3.1.0/ext/json/ext/parser
+/usr/bin/ruby extconf.rb
+checking for rb_enc_interned_str() in ruby/encoding.h... yes
+checking for rb_str_to_interned_str() in ruby.h... yes
+checking for rb_hash_new_capa() in ruby.h... yes
+checking for rb_hash_bulk_insert() in ruby.h... yes
+checking for ruby_xfree_sized() in ruby.h... no
+checking for x86intrin.h... yes
+checking for _lzcnt_u64() in x86intrin.h... no
+checking for intrin.h... no
+checking for RUBY_TYPED_EMBEDDABLE in ruby.h... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+checking for whether -mno-outline is accepted as CFLAGS... no
+checking for x86intrin.h... yes
+checking for cpuid.h... yes
+creating Makefile
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/json-3.1.0/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-bs2zt8 sitelibdir\=./.gem.20261019-15388-bs2zt8 clean
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/json-3.1.0/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-bs2zt8 sitelibdir\=./.gem.20261019-15388-bs2zt8
+compiling parser.c
+linking shared-object json/ext/parser.so
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/json-3.1.0/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-bs2zt8 sitelibdir\=./.gem.20261019-15388-bs2zt8 install
+/usr/bin/install -c -m 0755 parser.so ./.gem.20261019-15388-bs2zt8/json/ext
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/json-3.1.0/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-bs2zt8 sitelibdir\=./.gem.20261019-15388-bs2zt8 clean

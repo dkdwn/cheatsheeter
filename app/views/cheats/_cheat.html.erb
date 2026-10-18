@@ -1,0 +1,8 @@
+<article id="<%= dom_id cheat %>" class="cheat-card">
+  <% if cheat.category.present? %>
+    <p class="cheat-card__category"><%= cheat.category %></p>
+  <% end %>
+  <h2 class="cheat-card__title"><%= link_to cheat.name, cheat %></h2>
+  <p class="cheat-card__content"><%= cheat.content %></p>
+  <%= link_to "Ouvrir la fiche →", cheat, class: "cheat-card__link" %>
+</article>

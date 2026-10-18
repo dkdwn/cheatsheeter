@@ -1,0 +1,26 @@
+<% content_for :title, @cheat.name %>
+
+<main class="page-shell page-shell--narrow">
+  <nav class="page-nav" aria-label="Navigation principale">
+    <%= link_to "cheatsheeter", root_path, class: "page-brand" %>
+    <%= link_to "Mes fiches", cheats_path, class: "page-nav__link" %>
+  </nav>
+
+  <% if notice.present? %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+
+  <article class="cheat-detail">
+    <% if @cheat.category.present? %>
+      <p class="cheat-card__category"><%= @cheat.category %></p>
+    <% end %>
+    <h1><%= @cheat.name %></h1>
+    <div class="cheat-detail__content"><%= simple_format(@cheat.content) %></div>
+  </article>
+
+  <div class="detail-actions">
+    <%= link_to "Modifier", edit_cheat_path(@cheat), class: "button button--primary" %>
+    <%= link_to "Retour à mes fiches", cheats_path, class: "text-link" %>
+    <%= button_to "Supprimer", @cheat, method: :delete, class: "button button--danger" %>
+  </div>
+</main>

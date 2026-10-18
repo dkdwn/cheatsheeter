@@ -1,0 +1,102 @@
+append_cflags: checking for whether -std=gnu99 is accepted as CFLAGS... -------------------- yes
+
+LD_LIBRARY_PATH=.:/usr/lib ASAN_OPTIONS=detect_leaks=0 "gcc -o conftest -I/usr/include/ruby-3.4.0/x86_64-linux -I/usr/include/ruby-3.4.0/ruby/backward -I/usr/include/ruby-3.4.0 -I. -I./../../include    -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -fPIC conftest.c -L. -L/usr/lib -L. -Wl,-O1 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now          -Wl,-z,pack-relative-relocs -flto=auto -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby  -lm -lpthread  -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+LD_LIBRARY_PATH=.:/usr/lib ASAN_OPTIONS=detect_leaks=0 "gcc -I/usr/include/ruby-3.4.0/x86_64-linux -I/usr/include/ruby-3.4.0/ruby/backward -I/usr/include/ruby-3.4.0 -I. -I./../../include    -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -fPIC  -std=gnu99 -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+
+append_cflags: checking for whether -Wimplicit-fallthrough is accepted as CFLAGS... -------------------- yes
+
+LD_LIBRARY_PATH=.:/usr/lib ASAN_OPTIONS=detect_leaks=0 "gcc -I/usr/include/ruby-3.4.0/x86_64-linux -I/usr/include/ruby-3.4.0/ruby/backward -I/usr/include/ruby-3.4.0 -I. -I./../../include    -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -fPIC -std=gnu99  -Wimplicit-fallthrough -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+
+append_cflags: checking for whether -Wunused-result is accepted as CFLAGS... -------------------- yes
+
+LD_LIBRARY_PATH=.:/usr/lib ASAN_OPTIONS=detect_leaks=0 "gcc -I/usr/include/ruby-3.4.0/x86_64-linux -I/usr/include/ruby-3.4.0/ruby/backward -I/usr/include/ruby-3.4.0 -I. -I./../../include    -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -fPIC -std=gnu99 -Wimplicit-fallthrough  -Wunused-result -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+
+append_cflags: checking for whether -Wc++-compat is accepted as CFLAGS... -------------------- yes
+
+LD_LIBRARY_PATH=.:/usr/lib ASAN_OPTIONS=detect_leaks=0 "gcc -I/usr/include/ruby-3.4.0/x86_64-linux -I/usr/include/ruby-3.4.0/ruby/backward -I/usr/include/ruby-3.4.0 -I. -I./../../include    -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -fPIC -std=gnu99 -Wimplicit-fallthrough -Wunused-result  -Wc++-compat -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+
+append_cflags: checking for whether -Wnullable-to-nonnull-conversion is accepted as CFLAGS... -------------------- no
+
+LD_LIBRARY_PATH=.:/usr/lib ASAN_OPTIONS=detect_leaks=0 "gcc -I/usr/include/ruby-3.4.0/x86_64-linux -I/usr/include/ruby-3.4.0/ruby/backward -I/usr/include/ruby-3.4.0 -I. -I./../../include    -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -fPIC -std=gnu99 -Wimplicit-fallthrough -Wunused-result -Wc++-compat  -Wnullable-to-nonnull-conversion -Werror -c conftest.c"
+gcc: error: option « -Wnullable-to-nonnull-conversion » non reconnue sur la ligne de commande
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+
+append_cflags: checking for whether -DNDEBUG is accepted as CFLAGS... -------------------- yes
+
+LD_LIBRARY_PATH=.:/usr/lib ASAN_OPTIONS=detect_leaks=0 "gcc -I/usr/include/ruby-3.4.0/x86_64-linux -I/usr/include/ruby-3.4.0/ruby/backward -I/usr/include/ruby-3.4.0 -I. -I./../../include    -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -fPIC -std=gnu99 -Wimplicit-fallthrough -Wunused-result -Wc++-compat  -DNDEBUG -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+

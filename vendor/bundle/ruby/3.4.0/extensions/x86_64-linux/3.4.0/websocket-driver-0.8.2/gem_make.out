@@ -1,0 +1,18 @@
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/websocket-driver-0.8.2/ext/websocket-driver
+/usr/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/websocket-driver-0.8.2/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-u5aimt sitelibdir\=./.gem.20261019-15388-u5aimt clean
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/websocket-driver-0.8.2/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-u5aimt sitelibdir\=./.gem.20261019-15388-u5aimt
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/websocket-driver-0.8.2/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-u5aimt sitelibdir\=./.gem.20261019-15388-u5aimt install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20261019-15388-u5aimt
+
+current directory: /home/lucas/Bureau/cheatsheeter/vendor/bundle/ruby/3.4.0/gems/websocket-driver-0.8.2/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20261019-15388-u5aimt sitelibdir\=./.gem.20261019-15388-u5aimt clean

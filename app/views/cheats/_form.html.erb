@@ -1,0 +1,32 @@
+<%= form_with(model: cheat, class: "cheat-form") do |form| %>
+  <% if cheat.errors.any? %>
+    <div class="form-errors">
+      <h2>La fiche n’a pas pu être enregistrée (<%= cheat.errors.count %> erreur(s)) :</h2>
+      <ul>
+        <% cheat.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-field">
+    <%= form.label :name, "Nom de la fiche" %>
+    <%= form.text_field :name, placeholder: "Ex. Les bases de Ruby" %>
+  </div>
+
+  <div class="form-field">
+    <%= form.label :content, "Contenu" %>
+    <%= form.textarea :content, rows: 8, placeholder: "Écris ici les points à retenir…" %>
+  </div>
+
+  <div class="form-field">
+    <%= form.label :category, "Catégorie" %>
+    <%= form.text_field :category, placeholder: "Ex. Ruby on Rails" %>
+  </div>
+
+  <div class="form-actions">
+    <%= form.submit(cheat.persisted? ? "Enregistrer les changements" : "Créer la fiche", class: "button button--primary") %>
+    <%= link_to "Annuler", cheats_path, class: "text-link" %>
+  </div>
+<% end %>

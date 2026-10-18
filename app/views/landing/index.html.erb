@@ -1,0 +1,29 @@
+<main class="landing">
+  <nav class="landing__nav" aria-label="Navigation principale">
+    <%= link_to "cheatsheeter", root_path, class: "landing__brand" %>
+    <% if authenticated? %>
+      <div class="landing__account">
+        <span class="landing__user"><%= Current.user.name %></span>
+        <%= button_to "Déconnexion", session_path, method: :delete, class: "button button--secondary" %>
+      </div>
+    <% end %>
+    <% if !authenticated? %>
+      <%= link_to "Login", new_session_path, class: "button button--secondary" %>
+    <% end %>
+  </nav>
+
+  <section class="landing__hero">
+    <p class="landing__eyebrow">TES CONNAISSANCES, À PORTÉE DE MAIN</p>
+    <h1>Garde l’essentiel.<br><span>Retrouve-le vite.</span></h1>
+    <p class="landing__description">
+      Tes fiches mémo au même endroit, prêtes à t’accompagner dans tes projets
+      et tes apprentissages.
+    </p>
+    <%= link_to "Découvrir mes fiches", cheats_path, class: "landing__button" %>
+  </section>
+
+  <footer class="landing__footer">
+    <span>Un espace simple pour apprendre et retenir.</span>
+    <span>Fait avec soin · Cheatsheeter</span>
+  </footer>
+</main>

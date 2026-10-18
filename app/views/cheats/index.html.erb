@@ -1,0 +1,36 @@
+<% content_for :title, "Cheats" %>
+
+<main class="page-shell">
+  <nav class="page-nav" aria-label="Navigation principale">
+    <%= link_to "cheatsheeter", root_path, class: "page-brand" %>
+    <%= link_to "Accueil", root_path, class: "page-nav__link" %>
+  </nav>
+
+  <% if notice.present? %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+
+  <header class="page-heading">
+    <div>
+      <p class="page-eyebrow">TON ESPACE DE RÉVISION</p>
+      <h1>Mes fiches</h1>
+      <p class="page-description">Retrouve tes notes et tes idées au même endroit.</p>
+    </div>
+    <%= link_to "＋ Nouvelle fiche", new_cheat_path, class: "button button--primary" %>
+  </header>
+
+  <% if @cheats.any? %>
+    <section id="cheats" class="cheat-grid" aria-label="Liste des fiches">
+      <% @cheats.each do |cheat| %>
+        <%= render cheat %>
+      <% end %>
+    </section>
+  <% else %>
+    <section class="empty-state">
+      <p class="empty-state__icon" aria-hidden="true">✳</p>
+      <h2>Tout commence par une fiche</h2>
+      <p>Crée ta première fiche pour garder les informations importantes à portée de main.</p>
+      <%= link_to "Créer ma première fiche", new_cheat_path, class: "button button--primary" %>
+    </section>
+  <% end %>
+</main>

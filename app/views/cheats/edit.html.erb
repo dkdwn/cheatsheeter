@@ -1,0 +1,23 @@
+<% content_for :title, "Modifier la fiche" %>
+
+<main class="page-shell page-shell--narrow">
+  <nav class="page-nav" aria-label="Navigation principale">
+    <%= link_to "cheatsheeter", root_path, class: "page-brand" %>
+    <%= link_to "Mes fiches", cheats_path, class: "page-nav__link" %>
+  </nav>
+
+  <header class="page-heading page-heading--compact">
+    <div>
+      <p class="page-eyebrow">MISE À JOUR</p>
+      <h1>Modifier la fiche</h1>
+      <p class="page-description">Mets tes notes à jour et garde-les utiles.</p>
+    </div>
+  </header>
+
+  <%= render "form", cheat: @cheat %>
+
+  <div class="form-secondary-links">
+    <%= link_to "Voir la fiche", @cheat, class: "text-link" %>
+    <%= link_to "Retour à mes fiches", cheats_path, class: "text-link" %>
+  </div>
+</main>

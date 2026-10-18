@@ -1,0 +1,18 @@
+<% content_for :title, "Nouvelle fiche" %>
+
+<main class="page-shell page-shell--narrow">
+  <nav class="page-nav" aria-label="Navigation principale">
+    <%= link_to "cheatsheeter", root_path, class: "page-brand" %>
+    <%= link_to "Mes fiches", cheats_path, class: "page-nav__link" %>
+  </nav>
+
+  <header class="page-heading page-heading--compact">
+    <div>
+      <p class="page-eyebrow">NOUVELLE NOTE</p>
+      <h1>Créer une fiche</h1>
+      <p class="page-description">Note l’essentiel, tu pourras toujours la modifier ensuite.</p>
+    </div>
+  </header>
+
+  <%= render "form", cheat: @cheat %>
+</main>
