@@ -1,24 +1,15 @@
-# README
+# Cheatsheeter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Cheatsheeter is a cheat sheet manager wed app written with Ruby on rails
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+-[x] Authentication
+-[x] Dashboard
+-[ ] Markdown support
 
-* System dependencies
+## Stack
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Frontend: HTML, CSS
+- Backend: Ruby on rails
+- Database: SQL
