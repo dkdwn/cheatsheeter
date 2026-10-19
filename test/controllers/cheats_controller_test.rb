@@ -1,8 +1,10 @@
 require "test_helper"
 
 class CheatsControllerTest < ActionDispatch::IntegrationTest
+  fixtures :users, :cheats
   setup do
     @cheat = cheats(:one)
+    sign_in_as(users(:one))
   end
 
   test "should get index" do
